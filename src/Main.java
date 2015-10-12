@@ -1,4 +1,5 @@
 import java.util.List;
+
 import java.io.*;
 
 public class Main {
@@ -70,14 +71,17 @@ public class Main {
             } //for
             
             System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
+            
             totalWins += winCount;
             totalLosses += loseCount;
-
+            System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
+    	
+            
             String ans = console.readLine();
             if (ans.equals("q")) break;
         } //while true
+       
         
-        System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
 	}
 
 }
