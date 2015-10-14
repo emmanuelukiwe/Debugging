@@ -38,6 +38,8 @@ public class Main {
                 		player.getName(), player.getBalance(), player.getLimit()));
 
                 int turn = 0;
+                //The below condition determines when the program would stop
+                //The program stops when the bet doesnt exceed balance or when he wins upto 200
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
                 {
                     turn++;                    
